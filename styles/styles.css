@@ -63,6 +63,7 @@
           justify-content: center;
   text-decoration: none;
   padding: 0 1rem;
+  cursor: pointer;
 }
 
 .navbar__menu--links:hover {

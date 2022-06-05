@@ -10,22 +10,45 @@
     ></script>
     <link rel="stylesheet" href="./styles/styles.css" />
     <title>Document</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
   </head>
   <body>
+    
+   
+     
+   
     <!-- Navbar section -->
+    
     <nav class="navbar">
       <a href="/" class="navbar__logo">SASS</a>
       <div class="navbar__bars">
         <i class="fas fa-bars"></i>
       </div>
       <div class="navbar__menu">
+        <a class="navbar__menu--links" id="toggle">Change A Color</a>
+        <a class="navbar__menu--links" id="hideBar">Hide navbar</a>
         <a href="/" class="navbar__menu--links">Home</a>
         <a href="/" class="navbar__menu--links">Products</a>
         <a href="/" class="navbar__menu--links">Services</a>
         <a href="/" class="navbar__menu--links" id="button">Sign up</a>
       </div>
+      <script>
+        $( "#toggle" ).click(function() {
+          $( "#signUp" ).animate({
+            color: "green",
+            backgroundColor: "rgb( 255, 165, 0, 1)"
+          });
+        });
+        </script>
     </nav>
-
+    <script>
+      $( "#hideBar" ).click(function() {
+        $( "nav" ).hide( "drop", { direction: "down" }, "slow" );
+      });
+      </script>
     <!-- Hero section -->
     <div class="hero">
       <div class="hero__container">
@@ -34,7 +57,7 @@
           <h2>Be prepared</h2>
           <p>Sign up now</p>
           <button class="hero__container--btn">
-            <a href="#">Sign up</a>
+            <a id="signUp" href="#">Sign up</a>
           </button>
         </div>
         <div class="hero__container--right">
